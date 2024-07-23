@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: black;
+            overflow: hidden;
+        }
+        .circle {
+            margin-left: 70%;
+            box-shadow: 0 0 20px 5px rgba(25, 184, 247, 0.623);
+            width: 900px;
+            height: 900px;
+            background-color: #3498db;
+            border-radius: 50%; 
+            transition: margin-left 1s ease, background-color 1s ease; 
+        }
+        .btn {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="btn" onclick="play()">Submit</button>
+    <div class="circle"></div>
+    <script>
+        var circle = document.getElementsByClassName("circle")[0];
+        let count = true; 
+
+        function play() {
+            if (count) {
+                circle.style.marginLeft = "-10%";
+                circle.style.backgroundColor = "red";
+            } else {
+                circle.style.marginLeft = "70%";
+                circle.style.backgroundColor = "#3498db"; 
+            }
+            count = !count; 
+        }
+    </script>
+</body>
+</html>
